@@ -9,7 +9,7 @@ int main()
     auto trianglePointer = new Triangle();
 
     const int COUNT_OF_TRIANGLES = 3;  
-    Triangle arrayOfTriangles[COUNT_OF_TRIANGLES] = {
+    Triangle arrayOfTriangles[COUNT_OF_TRIANGLES] {
         Triangle(1, 2, 50),
         Triangle(13, 11, 43),
         Triangle(10, 15, 90)
@@ -46,20 +46,20 @@ int main()
     printTriangle(triangle);
     std::cout << std::endl;
 
-    triangle.setFistSide(1);
+    triangle.setFirstSide(1);
     std::cout << "Triangle after set it's first side to 1:" << std::endl;
     printTriangle(triangle);
     std::cout << std::endl;
 
     std::cout << "Perimeter of each triangle in the array:" << std::endl;
     for (int i = 0; i < COUNT_OF_TRIANGLES; i++) {
-        std::cout << "Triangle " << i << ": "  << arrayOfTriangles[i].Perimeter() << std::endl;
+        std::cout << "Triangle " << i + 1 << ": "  << arrayOfTriangles[i].perimeter() << std::endl;
     }
     std::cout << std::endl;
 
     std::cout << "Area of each triangle in the collection:" << std::endl;
     for (int i = 0; i < collectionOfTriangles.size(); i++) {
-        std::cout << "Triangle " << i << ": "  << collectionOfTriangles[i].Area() << std::endl;
+        std::cout << "Triangle " << i + 1 << ": "  << collectionOfTriangles[i].area() << std::endl;
     }
 
 }

@@ -24,7 +24,7 @@ double Triangle::getFirstSide()
     return this->firstSide;
 }
 
-void Triangle::setFistSide(double length)
+void Triangle::setFirstSide(double length)
 {
     this->firstSide = length;
 
@@ -69,15 +69,15 @@ void Triangle::calculateThirdSide()
     );
 }
 
-double Triangle::Perimeter()
+double Triangle::perimeter()
 {
     return this->firstSide + this->secondSide + this->thirdSide;
 }
 
-double Triangle::Area()
+double Triangle::area()
 {
     // Heron's formula
-    auto halfPerimeter = this->Perimeter() / 2;
+    auto halfPerimeter = this->perimeter() / 2;
 
     return sqrt(
         halfPerimeter *

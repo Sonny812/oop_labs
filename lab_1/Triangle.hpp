@@ -13,7 +13,7 @@ public:
     Triangle();
     Triangle(double firstSide, double secondSide, double angle);
     double getFirstSide();
-    void setFistSide(double length);
+    void setFirstSide(double length);
 
     double getSecondSide();
     void setSecondSide(double length);
@@ -23,8 +23,8 @@ public:
     double getAngle();
     void setAngle(double angle);
 
-    double Area();
-    double Perimeter();
+    double area();
+    double perimeter();
 
     Triangle operator*(double number);
     Triangle operator+(double number);
