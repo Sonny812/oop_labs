@@ -2,7 +2,7 @@
 
 class Triangle
 {
-private:
+protected:
     double firstSide;
     double secondSide;
     double thirdSide;
