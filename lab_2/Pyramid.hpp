@@ -14,7 +14,7 @@ public:
     double getHeight();
     void setHeight(double number);
     
-    double Volume();
+    double volume();
     
     Pyramid &operator=(Pyramid &pyramid);
     friend double operator+(Pyramid &leftOp, Pyramid &rightOp);

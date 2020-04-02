@@ -10,7 +10,7 @@ void Pyramid::setHeight(double number)
     this->height = height;
 }
 
-double Pyramid::Volume()
+double Pyramid::volume()
 {
     return 1.0 / 3 * this->area() * this->height;
 }
@@ -27,5 +27,5 @@ Pyramid &Pyramid::operator=(Pyramid &pyramid)
 
 double operator+(Pyramid &leftOp, Pyramid &rightOp)
 {
-    return leftOp.Volume() + rightOp.Volume();
+    return leftOp.volume() + rightOp.volume();
 }

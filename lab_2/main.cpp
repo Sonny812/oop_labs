@@ -12,12 +12,12 @@ int main()
 
     std::cout << "First pyramid:" << std::endl;
     printPyramid(pyramids[0]);
-    std::cout << "Volume: " << pyramids[0].Volume() << std::endl;
+    std::cout << "Volume: " << pyramids[0].volume() << std::endl;
     std::cout << std::endl;
 
     std::cout << "Second pyramid:" << std::endl;
     printPyramid(pyramids[1]);
-    std::cout << "Volume: " << pyramids[1].Volume() << std::endl;
+    std::cout << "Volume: " << pyramids[1].volume() << std::endl;
     std::cout << std::endl;
 
     std::cout << "Sum of pyramids volumes: " << pyramids[0] + pyramids[1] << std::endl;
