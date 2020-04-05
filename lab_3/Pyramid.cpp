@@ -5,7 +5,7 @@ double Pyramid::getHeight()
     return this->height;
 }
 
-void Pyramid::setHeight(double number)
+void Pyramid::setHeight(double height)
 {
     this->height = height;
 }
