@@ -23,6 +23,12 @@ int main()
 
     std::cout << "Assign pointer on pyramid to pointer on triangle and call show method" << std::endl;
     triangle->show();
-    
+    std::cout << std::endl;
+
+    pyramid->setHeight(100);
+    std::cout << "Set pyramid height to 100:" << std::endl;
+    triangle->show();
+    std::cout << std::endl;
+
     delete pyramid;
 }
