@@ -28,8 +28,8 @@ namespace lab_6
 			{
 				var productItem = new ProductMenuItem(product);
 
-				productItem.EnabledChanged += (s, e) => recalculateResult();
-				productItem.CountChange += (s, e) => recalculateResult();
+				productItem.EnabledChanged += (s, e) => RecalculateResult();
+				productItem.CountChanged += (s, e) => RecalculateResult();
 
 				this.flpMenu.Controls.Add(productItem);
 				this.clbMenu.Items.Add(product);
@@ -40,10 +40,10 @@ namespace lab_6
 		{
 			var checkedProduct = clbMenu.Items[e.Index] as Product;
 
-			productMenuItems.Find(x => x.product == checkedProduct).Enabled = e.NewValue == CheckState.Checked;
+			productMenuItems.Find(x => x.Product == checkedProduct).Enabled = e.NewValue == CheckState.Checked;
 		}
 
-		private void recalculateResult()
+		private void RecalculateResult()
 		{
 			this.txtbxResult.Clear();
 
@@ -52,16 +52,16 @@ namespace lab_6
 
 			foreach (var menuItem in productMenuItems.Where(x => x.Enabled))
 			{
-				var product = menuItem.product;
+				var product = menuItem.Product;
 				var count = menuItem.Count;
 				var subtotal = count * product.Price;
 
-				this.txtbxResult.Text += $"{product.Title}\t\t{product.Price}\t\t{count}\t\t{subtotal}" + Environment.NewLine;
+				this.txtbxResult.Text += $"{product.Title}\t\t{product.Price} руб.\t\t{count}\t\t{subtotal}руб.{Environment.NewLine}";
 
 				total += subtotal;
 			}
 
-			this.txtbxResult.Text += "----------" + Environment.NewLine;
+			this.txtbxResult.Text += "----------" + Environment.NewLine + Environment.NewLine;
 			this.txtbxResult.Text += $"Итого: {total} руб";
 		}
 	}

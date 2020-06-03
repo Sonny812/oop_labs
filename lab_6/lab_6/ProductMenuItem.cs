@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace lab_6
 {
 	class ProductMenuItem: FlowLayoutPanel
 	{
-		public readonly Product product;
+		public readonly Product Product;
 		private readonly Label label;
 		private readonly NumericUpDown nud;
 
-		public event EventHandler CountChange;
+		public event EventHandler CountChanged;
 
 		public int Count { get => (int)this.nud.Value; }
 
@@ -21,7 +17,7 @@ namespace lab_6
 		{
 			this.AutoSize = true;
 
-			this.product = product;
+			this.Product = product;
 
 			this.label = new Label();
 			this.label.Text = product.Title;
@@ -31,7 +27,7 @@ namespace lab_6
 			this.nud = new NumericUpDown();
 
 			this.nud.Minimum = 1;
-			this.nud.ValueChanged += (s, e) => CountChange(this, new EventArgs());
+			this.nud.ValueChanged += (s, e) => CountChanged(this, new EventArgs());
 			
 			this.Controls.Add(this.label);
 			this.Controls.Add(this.nud);
