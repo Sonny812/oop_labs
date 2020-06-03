@@ -2,3 +2,6 @@
 a.out
 /report/
 *.o
+.vs
+obj/
+bin/
