@@ -63,6 +63,9 @@
     <Compile Include="FormRow\FormRow.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FormRow\ListBoxRow.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormRow\TextBoxRow.cs">
       <SubType>Component</SubType>
     </Compile>

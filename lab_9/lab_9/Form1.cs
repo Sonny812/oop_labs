@@ -36,13 +36,22 @@ namespace lab_9
 					"Дипломатический паспорт РФ"
 				}
 			),
+			new ListBoxRow(
+				"Причины упортебления газированных напитков",
+				new List<string> {
+					"Вкусно",
+					"Утоляют жажду",
+					"Привлекает внешний вид",
+					"Просто так"
+				}
+			),
 			new CheckBoxRow("Страна пребывания является страной гражданства"),
 		};
 
 		public Form1()
 		{
 			InitializeComponent();
-			
+
 			foreach (var row in rows)
 			{
 				this.leftPanel.Controls.Add(row);
